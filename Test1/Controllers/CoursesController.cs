@@ -13,8 +13,7 @@ namespace Test1.Controllers
 {
     public class CoursesController : Controller
     {
-        private CourseRepository _courseRepo = new CourseRepository();
-
+        private CourseRepository _courseRepo = new CourseRepository(); 
         // GET: Courses
         public ActionResult Index()
         {

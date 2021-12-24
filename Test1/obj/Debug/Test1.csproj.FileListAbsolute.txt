@@ -80,3 +80,4 @@ D:\Working\src\Test\Test1\Test1\obj\Debug\Test1.csproj.CoreCompileInputs.cache
 D:\Working\src\Test\Test1\Test1\obj\Debug\Test1.csproj.CopyComplete
 D:\Working\src\Test\Test1\Test1\obj\Debug\Test1.dll
 D:\Working\src\Test\Test1\Test1\obj\Debug\Test1.pdb
+D:\Working\src\Test\Test1\Test1\obj\Debug\Test1.csproj.AssemblyReference.cache

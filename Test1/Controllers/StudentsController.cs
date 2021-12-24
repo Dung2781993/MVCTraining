@@ -37,28 +37,29 @@ namespace Test1.Controllers
         //    return View(student);
         //}
 
-        //// GET: Students/Create
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //}
+        // GET: Students/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
 
-        //// POST: Students/Create
-        //// To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "StudentID,LastName,FirstName,EnrollmentDate")] Student student)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Students.Add(student);
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
+        // POST: Students/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "StudentID,LastName,FirstName")] Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                student.EnrollmentDate = DateTime.Now;
+                _studentRepo.Insert(student);
+                _studentRepo.Save();
+                return RedirectToAction("Index");
+            }
 
-        //    return View(student);
-        //}
+            return View(student);
+        }
 
         //// GET: Students/Edit/5
         //public ActionResult Edit(int? id)
